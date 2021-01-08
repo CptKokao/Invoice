@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="Тестовое задание Invoice")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="shortcut icon" type="image/png" href="./img/favicon.png")
+    link(rel='stylesheet', href='/css/style.min.css')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    title Тестовое задание Invoice
+
+  body
+    
+    header
+      .sl
+        //- Слайдер
+        .swiper-container
+          .swiper-wrapper
+
+            //- Слайдер1
+            .swiper-slide(style="background-image:url(./img/hero.jpg)")
+
+              .container.sl-wrapper
+                .sl__number 01            
+                h1.sl__title Invoice
+                .btn.sl__btn 
+                  a(href="#") Learn more
+
+            //- Слайдер2
+            .swiper-slide(style="background-image:url(./img/hero.jpg)")
+              
+              .container.sl-wrapper
+                .sl__number 02
+                h1.sl__title Invoice
+                .btn.sl__btn Learn more
+
+            //- Слайдер3              
+            .swiper-slide(style="background-image:url(./img/hero.jpg)")
+              
+              .container.sl-wrapper
+                .sl__number 03
+                h1.sl__title Invoice
+                .btn.sl__btn Learn more
+
+            //- Слайдер3    
+            .swiper-slide(style="background-image:url(./img/hero.jpg)")
+              
+              .container.sl-wrapper
+                .sl__number 04
+                h1.sl__title Invoice
+                .btn.sl__btn Learn more
+
+          .swiper-pagination
+
+          .sl__mouse
+            img.wibro(src="./img/mouse.svg" width="20" height="30" alt="Компьютерная мышка")
+            p Scroll
+
+          //- Поделится
+          a(class="share" href="#")
+            img(src="./img/share.svg" width="25" height="25" alt="Поделиться")
+
+        //- Шапка с навигацией
+        .nav.container-fluid
+        
+          //- Hamburger
+          button(class="hamburger hamburger--collapse" type='button' aria-label="Menu")
+            span.hamburger-box
+              span.hamburger-label Menu
+              span.hamburger-inner
+
+          //- Лого
+          h1.logo Invoice // test
+
+          //- Навигация
+          nav
+            ul
+              li 
+                a(href="#") Home
+              li 
+                a(href="#") Products
+              li 
+                a(href="#") About
+          
+          //- Иконка инфо
+          a(class="info" href="#")
+            img(src="./img/info.svg" width="23" height="23" alt="Инфо")
+
+          //- Переключение языка
+          .lang EN
+
+    main
+      //- Преимущества
+      section.adv
+        .container
+          .bl.bl--pseudo.parallax-l
+            .bl__desc
+              h2.bl__title F to respect
+              p.bl__text PHP is a general-purpose scripting language especially suited to web development. It was originally created by Danish-Canadian programmer
+              a.bl__more Learn more
+              p * On your own risk
+              .adv__number
+                | 01
+                span &#46;       
+
+            .bl__img
+              .bl__img-name coding
+              img(src="./img/coding.jpg", alt="Программирование" width="615" height="395")
+
+          .bl.bl-reverse.bl-reverse--pseudo.parallax-r
+            .bl__desc.bl__desc--reverse
+              h2.bl__title.bl__title--reverse Design
+              p.bl__text.bl__text--reverse  Design is a plan or specification for the construction of an object or system or for the implementation
+              a.bl__more.bl__more--reverse Learn more
+
+            .bl__img
+              .bl__img-name.bl__img-name--reverse design
+              img(src="./img/design.jpg", alt="Дизайн" width="615" height="395")
+
+            .adv__number.adv__number--reverse
+              | 02
+              span &#46;
+          
+      //- Работа
+      section.work
+        .container
+          h2.work__title Invoice – its work
+          p.work__desc We create unique payment product.<br> Look at the short video about our system.
+
+          .work__wrapper
+            .work__item.mousemove__unit
+              a(href="#")
+                .work__img
+                  img(src="./img/product.png", width="245" height="245" alt="Product")
+              p Innovative Product
+
+            .work__item.mousemove__unit
+              .work__img
+                img(src="./img/skill.png", width="245" height="245" alt="Skill")
+              p High-level Skills
+
+            .work__item.mousemove__unit
+              .work__img
+                img(src="./img/quality.png", width="245" height="245" alt="Quality")
+              p Quality Products
+
+      //- Видео
+      section.video
+        .video__border
+          .container
+            .video__wrapper
+              h2.video__title invoice - more than just a payment
+              p.video__desc A payment is the voluntary tender of money or its equivalent or of things of value by one party (such as a person or company) to another in exchange for goods, or services provided by them, or to fulfill a legal obligation. The party making a payment is commonly called the payer, while the payee is the party receiving the payment.
+              .btn.video__btn 
+                a(href="") watch video
+
+      //- О нас
+      section.about
+        .container
+          .bl.bl-reverse.bl-reverse--pseudo.parallax-r
+            .bl__desc.about__desc
+              h2.bl__title About us
+              p.bl__text We are a team of professionals in the payment processing and other cool integration in acquiring system
+              a.bl__more Learn more
+              
+            .bl__img
+              .bl__img-name.bl__img-name--reverse about
+              img(src="./img/about.jpg", alt="О нас" width="615" height="395")
+
+
+          
+
+
+  
+  script(src="./js/script.js")
+ 
+
+
+
+
+

@@ -1,0 +1,151 @@
+header {
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding-top: 25px;
+
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+  }
+}
+
+.logo {
+  flex: 0 1 auto;
+  margin-left: 10%;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 36px;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 5%;
+    font-size: 24px;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+nav {
+  flex: 1 1 auto;
+  margin-left: 6%;
+
+  @media (max-width: $mobile-width) {
+    opacity: 0;
+    margin-left: 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: 300ms opacity;
+    z-index: 1;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: $mobile-width) {
+      flex-direction: column;
+    }
+  }
+
+  li {
+    margin-right: 15%;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @media (max-width: $tablet-width) {
+      font-size: 12px;
+    }
+
+    @media (max-width: $mobile-width) {
+      position: relative;
+      list-style: none;
+      min-height: 80px;
+      background-color: #020101;
+      display: flex;
+      align-items: center;
+      border-top: 1px solid grey;
+      justify-content: center;
+      margin-right: 0;
+    }
+  }
+}
+
+.info {
+  flex: 0 0 30px;
+  margin-right: 2.5%;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-left: auto;
+  }
+
+  img {
+    width: 23px;
+    height: 23px;
+
+    @media (max-width: $tablet-width) {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.lang {
+  flex: 0 0 30px;
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 2%;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 6px solid #fff;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 12px;
+
+    &::after {
+      right: 4px;
+    }
+  }
+}
+
+.share {
+  position: absolute;
+  bottom: 15px;
+  right: 35px;
+  width: 23px;
+  height: auto;
+  z-index: 1;
+
+  @media (max-width: $tablet-width) {
+    right: 20px;
+    width: 20px;
+  }
+}

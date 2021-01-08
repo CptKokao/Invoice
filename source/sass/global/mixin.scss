@@ -1,0 +1,55 @@
+@mixin h2 {
+  position: relative;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 38px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 28px;
+  }
+}
+
+@mixin h2--line {
+  @include h2;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -180px;
+    width: 150px;
+    height: 1px;
+    background-color: #000;
+  }
+
+  @media (max-width: $mobile-width) {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@mixin text-line {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -80px;
+    width: 45px;
+    height: 3px;
+    background-color: #bea67c;
+  }
+
+  @media (max-width: $mobile-width) {
+    &::after {
+      display: none;
+    }
+  }
+}

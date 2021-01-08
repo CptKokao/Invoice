@@ -1,0 +1,21 @@
+// Импорт дополнительных стилей
+@import "plugin/normalize.scss";
+
+// Импорт глобальных файлов
+@import "global/fonts.scss";
+@import "global/variables.scss";
+@import "global/global.scss";
+@import "global/mixin.scss";
+
+// Импорт компонентов
+
+@import "components/header/swiper-setting.scss";
+@import "components/header/sl.scss";
+@import "components/header/nav.scss";
+@import "components/header/hamburgers.scss";
+@import "components/bl.scss";
+@import "components/adv.scss";
+@import "components/work.scss";
+@import "components/video.scss";
+@import "components/about.scss";
+

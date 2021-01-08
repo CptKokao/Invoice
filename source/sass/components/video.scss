@@ -1,0 +1,123 @@
+.video {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 85px 175px;
+  margin-top: 130px;
+
+  background: #000 url('../img/bg-video.jpg') center no-repeat;
+  background-size: cover;
+  color: #fff;
+
+  @media (max-width: 1200px) {
+    padding: 85px 75px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 50px;
+    padding: 30px 15px;
+  }
+}
+
+.video__border {
+  position: relative;
+  max-width: 1610px;
+  width: 100%;
+  min-height: 740px;
+  border: 1px solid salmon;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    width: 1px;
+    height: 150px;
+    transform: translateY(-50%);
+    background-color: #fff;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 500px;
+  }
+}
+
+.video__wrapper {
+  flex-direction: column;
+  padding: 210px 285px 185px 200px;
+
+  @media (max-width: $tablet-width) {
+    padding: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 20px 30px;
+  }
+
+  h2 {
+    @include h2--line;
+    width: 100%;
+    max-width: 600px;
+    color: #bea67c;
+    letter-spacing: 1px;
+
+    &::after {
+      top: 20%;
+      background-color: #fff;
+    }
+
+    @media (max-width: $tablet-width) {
+      max-width: 450px;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  p {
+    @include text-line;
+    width: 100%;
+    max-width: 525px;
+    margin-top: 42px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+
+    @media (max-width: $tablet-width) {
+      max-width: 450px;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.video__btn {
+  position: relative;
+  text-transform: uppercase;
+  margin-top: 15px;
+  padding-left: 30px;
+  letter-spacing: 3px;
+
+  @media (max-width: $mobile-width) {
+    width: 210px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 65px;
+    width: 25px;
+    height: 25px;
+    background-image: url('../img/video.svg');
+  }
+
+  @media (max-width: $mobile-width) {
+    &::before {
+      left: 15px;
+    }
+  }
+}

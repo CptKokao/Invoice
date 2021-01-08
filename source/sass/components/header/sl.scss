@@ -1,0 +1,149 @@
+.sl {
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -2%;
+    right: 19%;
+    width: 3px;
+    height: 45px;
+    background-color: #bea67c;
+    z-index: 10;
+  }
+
+  @media (max-width: 1200px) {
+    &::after {
+      bottom: -14%;
+      font-size: 350px;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    &::after {
+      font-size: 300px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.sl-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 330px;
+  padding-left: 350px;
+
+
+  @media (max-width: $mobile-width) {
+    padding: 150px 15px;
+    align-items: center;
+  }
+}
+
+.sl__btn {
+  position: relative;
+  margin-top: 40px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    right: 45px;
+    background: url(../img/arrow.svg) center no-repeat;
+    width: 45px;
+    height: 12px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 260px;
+
+    &::after {
+      right: 20px;
+    }
+  }
+}
+
+.sl__number {
+  position: absolute;
+  left: 18%;
+  top: 50%;
+  transform: rotate(90deg) translateX(-150px);
+  letter-spacing: 5px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: -70px;
+    width: 50px;
+    height: 5px;
+    background: #bea67c;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.sl__title {
+  font-size: 100px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  color: #fff;
+
+  @media (max-width: $tablet-width) {
+    font-size: 70px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 45px;
+  }
+}
+
+.sl__mouse {
+  position: absolute;
+  left: 37%;
+  top: 58%;
+  width: 20px;
+  height: 30px;
+  transition: 500ms opacity;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 5px;
+    background: url('../img/mouse-arrow.svg') center no-repeat;
+    width: 10px;
+    height: 80px;
+  }
+
+  p {
+    position: absolute;
+    top: 180px;
+    left: -25px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #393838;
+    transform: rotate(90deg);
+  }
+
+  @media (max-width: $mobile-width) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

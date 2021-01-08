@@ -1,0 +1,80 @@
+.swiper-container {
+  width: 100%;
+  height: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+
+  @media (max-width: $mobile-width) {
+    height: 750px;
+  }
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 52px;
+  font-weight: bold;
+  color: #bea67c;
+  width: 100%;
+  height: 1040px;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+
+  flex-shrink: 0;
+  position: relative;
+  transition-property: transform;
+
+  @media (max-width: $mobile-width) {
+    background-position: right;
+    
+  }
+}
+
+.swiper-pagination {
+  position: absolute;
+  left: 19%;
+  top: 57%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: 300ms opacity;
+  transform: translate3d(0px,-50%,0);
+  z-index: 10;
+
+  @media (max-width: $mobile-width) {
+    left: 50%;
+    top: 48%;
+    flex-direction: row;
+    transform: translateX(-50%);
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #303030;
+  margin: 20px 5px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #bea67c;
+}

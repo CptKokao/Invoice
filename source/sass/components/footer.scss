@@ -1,0 +1,30 @@
+.footer {
+  width: 100%;
+  min-height: 70px;
+  background: #000 url('../img/bg-footer.jpg') center no-repeat;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+}
+
+.footer__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.footer__copyright {
+  color: #464646;
+}
+
+.footer__logo {
+  font-size: 30px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  margin-left: 33%;
+
+  @media (max-width: $mobile-width) {
+    font-size: 20px;
+    margin-left: 20%;
+  }
+}

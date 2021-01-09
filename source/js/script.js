@@ -60,11 +60,11 @@ document.addEventListener('DOMContentLoaded', () => {
   items.forEach((item) => {
     item.addEventListener('mouseenter', () => {
 
-      item.classList.remove('mousemove__unit--return');
-      item.classList.add('mousemove__unit--entered');
+      item.classList.remove('mousemove-unit--return');
+      item.classList.add('mousemove-unit--entered');
 
       setTimeout(() => {
-        item.classList.remove('mousemove__unit--entered');
+        item.classList.remove('mousemove-unit--entered');
       }, 200);
     });
 
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     item.addEventListener('mouseleave', () => {
-      item.classList.add('mousemove__unit--return');
+      item.classList.add('mousemove-unit--return');
     });
   });
 });

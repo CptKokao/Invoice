@@ -103,16 +103,16 @@
   }
 }
 
-.mousemove__unit {
+.mousemove-unit {
   transition: none;
   backface-visibility: hidden;
 }
 
-.mousemove__unit--return {
+.mousemove-unit--return {
   transition: all ease-in-out .5s;
   transform: matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1)!important;
 }
 
-.mousemove__unit--entered {
+.mousemove-unit--entered {
   transition: all ease-in-out .1s;
 }

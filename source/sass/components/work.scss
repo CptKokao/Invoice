@@ -75,6 +75,7 @@
   height: 270px;
   border-radius: 50%;
   padding: 15px;
+  margin: 0 auto;
   border: 1px solid #e4e4e4;
   cursor: pointer;
 
@@ -86,7 +87,7 @@
     transform: translateX(-50%) translateY(50%);
     width: 70px;
     height: 70px;
-    background-image: url('../img/play.svg');
+    background-image: url("../img/play.svg");
     background-size: cover;
   }
 
@@ -109,10 +110,10 @@
 }
 
 .mousemove-unit--return {
-  transition: all ease-in-out .5s;
-  transform: matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1)!important;
+  transition: all ease-in-out 0.5s;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)!important;
 }
 
 .mousemove-unit--entered {
-  transition: all ease-in-out .1s;
+  transition: all ease-in-out 0.1s;
 }

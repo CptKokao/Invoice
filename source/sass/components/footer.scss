@@ -1,11 +1,15 @@
 .footer {
   width: 100%;
-  min-height: 70px;
-  background: #000 url('../img/bg-footer.jpg') center no-repeat;
-  color: #fff;
+  min-height: 68px;
+  background: #000000 url("../img/bg-footer.webp") center no-repeat;
+  color: #ffffff;
+  padding-top: 20px;
+}
 
-  display: flex;
-  align-items: center;
+/* если не поддерживается webp */
+.no-webp .footer {
+  background: #000000 url("../img/bg-footer.jpg") center no-repeat;
+  background-size: cover;
 }
 
 .footer__wrapper {

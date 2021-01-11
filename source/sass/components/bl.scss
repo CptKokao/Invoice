@@ -61,14 +61,6 @@
     z-index: 1;
   }
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: -29%;
-  //   right: auto;
-  //   left: 15px;
-  // }
-
   @media (max-width: 1200px) {
     &::after {
       display: none;
@@ -82,7 +74,6 @@
   padding-left: 170px;
 
   @media (max-width: $mobile-width) {
-    // max-width: 480px;
     width: auto;
     padding-left: 0;
     padding-top: 50px;
@@ -108,7 +99,7 @@
   @include h2--line;
 
   &::after {
-    background-color: #000;
+    background-color: #000000;
   }
 }
 
@@ -142,7 +133,6 @@
 .bl__img {
   position: relative;
   max-width: 615px;
-  width: 100%;
   height: auto;
 
   img {
@@ -181,7 +171,7 @@
   position: relative;
   font-size: 14px;
   font-weight: bold;
-  color: #000;
+  color: #000000;
   text-transform: uppercase;
   margin-bottom: 20px;
   letter-spacing: 3px;
@@ -197,12 +187,13 @@
   }
 
   &::before {
-    content: "\1F812";
+    content: "";
     position: absolute;
-    top: -15px;
-    right: -45px;
-    color: #bea67c;
-    font-size: 40px;
+    top: 2px;
+    right: -47px;
+    background: url("../img/more-arrow.png") center no-repeat;
+    width: 35px;
+    height: 10px;
   }
 }
 

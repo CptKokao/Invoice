@@ -25,12 +25,12 @@ gulp.task('pug', function () {
 gulp.task('css', function () {
   return gulp.src('source/sass/style.scss')
       .pipe(plumber())
-      .pipe(sourcemap.init())
+      // .pipe(sourcemap.init())
       .pipe(sass())
       .pipe(postcss([autoprefixer()]))
       .pipe(csso())
       .pipe(rename('style.min.css'))
-      .pipe(sourcemap.write('.'))
+      // .pipe(sourcemap.write('.'))
       .pipe(gulp.dest('build/css'))
       .pipe(server.stream());
 });

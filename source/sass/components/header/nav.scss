@@ -10,16 +10,17 @@ header {
   left: 0;
   z-index: 10;
   padding-top: 25px;
+  padding-right: 25px;
 
   @media (max-width: $mobile-width) {
-    padding-left: 0;
+    padding: 5px;
   }
 }
 
 .logo {
   flex: 0 1 auto;
   margin-left: 10%;
-  color: #fff;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 10px;
   font-size: 36px;
@@ -37,6 +38,10 @@ header {
 nav {
   flex: 1 1 auto;
   margin-left: 6%;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 4%;
+  }
 
   @media (max-width: $mobile-width) {
     opacity: 0;
@@ -78,15 +83,20 @@ nav {
       justify-content: center;
       margin-right: 0;
     }
+
+    a {
+      color: #8c8a89;
+    }
   }
 }
 
 .info {
   flex: 0 0 30px;
   margin-right: 2.5%;
+  opacity: 0.5;
 
   &:hover {
-    opacity: 0.7;
+    opacity: 0.3;
   }
 
   @media (max-width: $mobile-width) {
@@ -107,9 +117,8 @@ nav {
 .lang {
   flex: 0 0 30px;
   position: relative;
-  color: #fff;
+  color: #8c8a89;
   cursor: pointer;
-  margin-right: 2%;
 
   &:hover {
     opacity: 0.7;
@@ -118,19 +127,20 @@ nav {
   &::after {
     content: "";
     position: absolute;
-    top: 4px;
+    top: 5px;
     right: 0;
     width: 0;
     height: 0;
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
-    border-top: 6px solid #fff;
+    border-top: 6px solid #707070;
   }
 
   @media (max-width: $tablet-width) {
     font-size: 12px;
 
     &::after {
+      top: 4px;
       right: 4px;
     }
   }

@@ -1,9 +1,11 @@
 'use strict';
 
-const hamburger = document.querySelector('.hamburger');
-const hamburgerLabel = document.querySelector('.hamburger-label');
 const nav = document.querySelector('nav');
 const mouseImg = document.querySelector('.sl__mouse img');
+const hamburger = document.querySelector('.hamburger');
+const hamburgerLabel = document.querySelector('.hamburger-label');
+const imageL = document.querySelector('.parallax-l');
+const imageR = document.querySelectorAll('.parallax-r');
 
 // Меню мобильной версии
 hamburger.addEventListener('click', function (e) {
@@ -11,13 +13,6 @@ hamburger.addEventListener('click', function (e) {
   hamburger.classList.toggle('is-active');
   nav.style.opacity = (nav.style.opacity === '1') ? '0' : '1';
   hamburgerLabel.style.opacity = (hamburgerLabel.style.opacity === '0') ? '1' : '0';
-});
-
-// Удаляет .wibro если был скролл
-window.addEventListener('scroll', () => {
-  if (mouseImg.classList.contains('wibro')) {
-    mouseImg.classList.remove('wibro');
-  }
 });
 
 // Init слайдер
@@ -29,31 +24,29 @@ const swiper = new Swiper('.swiper-container', {
   },
 });
 
+// Удаляет .wibro если был скролл
+window.addEventListener('scroll', () => {
+  if (mouseImg.classList.contains('wibro')) {
+    mouseImg.classList.remove('wibro');
+  }
+});
+
 // SimpleParallax
-var mobileWidth = '768';
-var image = document.querySelector('.parallax-l');
-var instanceL = new simpleParallax(image, {
+const PrallaxL = new simpleParallax(imageL, {
   orientation: 'left',
   scale: 2.0,
   overflow: true,
   delay: 0,
 });
 
-var image = document.querySelectorAll('.parallax-r');
-var instanceR = new simpleParallax(image, {
+const PrallaxR = new simpleParallax(imageR, {
   orientation: 'right',
   scale: 2.0,
   overflow: true,
 });
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   if (document.documentElement.clientWidth < mobileWidth) {
-//     instanceL.destroy();
-//     instanceR.destroy();
-//   }
-// });
 
-
+// Примагничивание
 document.addEventListener('DOMContentLoaded', () => {
   const items = document.querySelectorAll('.work__item');
 

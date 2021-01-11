@@ -41,7 +41,6 @@
   padding-top: 330px;
   padding-left: 350px;
 
-
   @media (max-width: $mobile-width) {
     padding: 150px 15px;
     align-items: center;
@@ -51,6 +50,7 @@
 .sl__btn {
   position: relative;
   margin-top: 40px;
+  padding: 20px 60px;
   text-transform: uppercase;
   letter-spacing: 3px;
 
@@ -58,9 +58,9 @@
     content: "";
     position: absolute;
     top: 22px;
-    right: 45px;
-    background: url(../img/arrow.svg) center no-repeat;
-    width: 45px;
+    right: 60px;
+    background: url("../img/arrow.png") center no-repeat;
+    width: 50px;
     height: 12px;
   }
 
@@ -100,7 +100,7 @@
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 20px;
-  color: #fff;
+  color: #ffffff;
 
   @media (max-width: $tablet-width) {
     font-size: 70px;
@@ -108,6 +108,7 @@
 
   @media (max-width: $mobile-width) {
     font-size: 45px;
+    padding-left: 15px;
   }
 }
 
@@ -125,7 +126,7 @@
     position: absolute;
     top: 50px;
     left: 5px;
-    background: url('../img/mouse-arrow.svg') center no-repeat;
+    background: url("../img/mouse-arrow.png") center no-repeat;
     width: 10px;
     height: 80px;
   }
@@ -142,8 +143,43 @@
     transform: rotate(90deg);
   }
 
+  @media (max-width: $tablet-width) {
+    left: 350px;
+  }
+
   @media (max-width: $mobile-width) {
     left: 50%;
     transform: translateX(-50%);
   }
 }
+
+.wibro {
+  position: relative;
+  animation-name: wibro;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 10s;
+}
+
+@keyframes wibro {
+  0%,
+  2%,
+  4%,
+  6%,
+  8%,
+  10% {
+    left: -1px;
+    transform: translateX(-7%);
+  }
+
+  1%,
+  3%,
+  5%,
+  7%,
+  9% {
+    left: 1px;
+    transform: translateX(7%);
+  }
+}
+

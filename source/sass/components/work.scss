@@ -1,6 +1,6 @@
 .work {
   margin: 0 auto;
-  margin-top: -70px;
+  margin-top: -50px;
   margin-bottom: 50px;
   max-width: 1000px;
   width: 100%;
@@ -45,6 +45,10 @@
   margin: 0 auto;
   text-align: center;
   line-height: 24px;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
 }
 
 .work__item {

@@ -1,4 +1,5 @@
 .video {
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
@@ -10,13 +11,50 @@
   background: #000000 url("../img/bg-video.webp") center no-repeat;
   background-size: cover;
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translate(-50%);
+
+    width: 81%;
+    height: 81%;
+    border: 1px solid salmon;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 16%;
+    width: 1px;
+    height: 150px;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+  }
+
   @media (max-width: 1200px) {
     padding: 85px 75px;
+
+    &::after {
+      height: 72%;
+    }
   }
 
   @media (max-width: $mobile-width) {
     margin-top: 50px;
     padding: 30px 15px;
+
+    &::after {
+      top: 25px;
+      width: 90%;
+      height: 90%;
+    }
+
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -26,32 +64,14 @@
   background-size: cover;
 }
 
-.video__border {
-  position: relative;
-  max-width: 1610px;
-  width: 100%;
-  min-height: 740px;
-  border: 1px solid salmon;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    width: 1px;
-    height: 150px;
-    transform: translateY(-50%);
-    background-color: #ffffff;
-  }
-
-  @media (max-width: $tablet-width) {
-    min-height: 500px;
-  }
-}
 
 .video__wrapper {
   flex-direction: column;
-  padding: 210px 285px 185px 200px;
+  padding: 18% 14% 16% 17%;
+
+  @media (max-width: 1200px) {
+    padding: 90px 120px 90px 220px;
+  }
 
   @media (max-width: $tablet-width) {
     padding: 50px;
@@ -104,7 +124,7 @@
   position: relative;
   text-transform: uppercase;
   margin-top: 15px;
-  padding-top: 20px;
+  padding-top: 23px;
   padding-bottom: 20px;
   padding-left: 110px;
   letter-spacing: 3px;

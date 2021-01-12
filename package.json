@@ -32,8 +32,5 @@
     "build": "gulp build",
     "start": "gulp start",
     "webp": "gulp webp"
-  },
-  "dependencies": {
-    "simple-parallax-js": "^5.6.2"
   }
 }

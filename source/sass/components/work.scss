@@ -71,6 +71,12 @@
       background-color: #bea67c;
     }
   }
+
+  a {
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 .work__img {
